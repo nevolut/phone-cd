@@ -23,7 +23,6 @@ const phone = local(00243812044091);
 
 console.log(phone)
 // 812044091
-
 ```
 
 ## Return phone number to a international format
@@ -34,7 +33,6 @@ const phone = international(0812044091);
 
 console.log(phone)
 // 243812044091
-
 ```
 
 ## Return phone number operator
