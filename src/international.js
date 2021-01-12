@@ -1,4 +1,4 @@
-const local = require("./local");
+const local = require("./national");
 const operator = require("./operator");
 
 module.exports = number => {
