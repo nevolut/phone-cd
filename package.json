@@ -1,0 +1,26 @@
+{
+  "name": "phone-cd",
+  "version": "1.0.0",
+  "description": "Phone DRC is a phone number library to manage DRC phone number",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "243",
+    "+243",
+    "00243",
+    "phone numeber",
+    "vodacom cd",
+    "airtel cd",
+    "orange cd",
+    "africl cd",
+    "Congo RD",
+    "DRC",
+    "phone243",
+    "phoneCD",
+    "phoneDRC",
+    "phoneRDC"
+  ],
+  "author": "abarchibody",
+  "license": "ISC",
+  "dependencies": {}
+}
