@@ -1,8 +1,8 @@
-const local = require("./national");
+import national from "./national";
 
-module.exports = number => {
+export default number => {
   if (!number) return null;
-  number = local(number);
+  number = national(number);
 
   if (number.toString().length !== 9) return null;
 

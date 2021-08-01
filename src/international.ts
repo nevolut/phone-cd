@@ -1,7 +1,7 @@
-const local = require("./national");
-const operator = require("./operator");
+import local from "./national";
+import operator from "./getOperator";
 
-module.exports = number => {
+export default number => {
   if (!number) return null;
   number = local(number);
   if (operator(number)) return `243${number}`;
