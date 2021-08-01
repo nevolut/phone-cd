@@ -1,6 +1,6 @@
 {
   "name": "phone-cd",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Phone DRC is a phone number library to manage DRC phone number",
   "main": "index.js",
   "scripts": {},
@@ -22,5 +22,8 @@
   ],
   "author": "abarchibody",
   "license": "ISC",
-  "dependencies": {}
+  "devDependencies": {
+    "source-map-loader": "^3.0.0",
+    "ts-loader": "^9.2.4"
+  }
 }

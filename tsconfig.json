@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "./built",
     "allowJs": false,
     "target": "es2016"
   },
