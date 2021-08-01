@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "outDir": "./built",
+    "outDir": "./dist",
     "allowJs": false,
     "target": "es2016"
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*", "index.ts"]
 }

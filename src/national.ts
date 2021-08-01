@@ -1,9 +1,15 @@
-export default number => {
-  number = parseInt(number);
+/**
+ * Format the phone number to national drc format.
+ * @param {number} string
+ * @returns number in national format
+ */
+
+export default (value: string | number): number => {
+  let number = +value;
   if (number.toString().substr(0, 4) == "+243")
-    number = number.toString().slice(4);
+    number = +number.toString().slice(4);
   else if (number.toString().substr(0, 3) == "243")
-    number = number.toString().slice(3);
+    number = +number.toString().slice(3);
 
   return number;
 };
