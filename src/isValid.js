@@ -1,15 +1,17 @@
-import nantional from "./national";
-import getOperator from "./getOperator";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var national_1 = require("./national");
+var getOperator_1 = require("./getOperator");
 /**
  * Check if a number is valid
  * @param {number} string
  * @returns true if number if valid drc phone number format
  */
-export default (value) => {
+exports.default = (function (value) {
     if (!value)
         return null;
-    const number = nantional(value);
-    if (getOperator(number))
+    var number = national_1.default(value);
+    if (getOperator_1.default(number))
         return true;
     return false;
-};
+});

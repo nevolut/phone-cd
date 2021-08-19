@@ -1,5 +1,7 @@
-import national from "./src/national";
-import international from "./src/international";
-import operator from "./src/getOperator";
-import isValid from "./src/isValid";
-export default { national, international, operator, isValid };
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var national_1 = require("./src/national");
+var international_1 = require("./src/international");
+var getOperator_1 = require("./src/getOperator");
+var isValid_1 = require("./src/isValid");
+exports.default = { national: national_1.default, international: international_1.default, operator: getOperator_1.default, isValid: isValid_1.default };

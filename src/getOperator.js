@@ -1,23 +1,25 @@
-import national from "./national";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var national_1 = require("./national");
 /**
  * @description Verify the phone number operatore
  * @param {number} string
  * @returns then oprator
  */
-export default (value) => {
+exports.default = (function (value) {
     if (!value)
         return null;
-    const number = national(value);
+    var number = national_1.default(value);
     if (number.toString().length !== 9)
         return null;
-    const prefix = parseInt(number.toString().substr(0, 2));
+    var prefix = parseInt(number.toString().substr(0, 2));
     if ([81, 82, 83].includes(prefix))
-        return `vodacom`;
+        return "vodacom";
     if ([80, 84, 85, 89].includes(prefix))
-        return `orange`;
+        return "orange";
     if ([90, 91].includes(prefix))
-        return `africel`;
+        return "africel";
     if ([97, 98, 99].includes(prefix))
-        return `airtel`;
+        return "airtel";
     return null;
-};
+});

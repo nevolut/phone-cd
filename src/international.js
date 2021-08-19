@@ -1,15 +1,17 @@
-import national from "./national";
-import getOperator from "./getOperator";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var national_1 = require("./national");
+var getOperator_1 = require("./getOperator");
 /**
  * @description Format the phone number to 243 format
  * @param {number} string
  * @returns number in international format
  */
-export default (value) => {
+exports.default = (function (value) {
     if (!value)
         return null;
-    const number = national(value);
-    if (getOperator(number))
-        return +`243${number}`;
+    var number = national_1.default(value);
+    if (getOperator_1.default(number))
+        return +("243" + number);
     return null;
-};
+});
