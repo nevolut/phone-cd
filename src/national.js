@@ -4,8 +4,8 @@
  * @param {number} string
  * @returns number in national format
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = (function (value) {
+exports.__esModule = true;
+exports["default"] = (function (value) {
     var number = +value;
     if (number.toString().substr(0, 4) == "+243")
         number = +number.toString().slice(4);
