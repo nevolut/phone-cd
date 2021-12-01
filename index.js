@@ -1,6 +1,11 @@
 "use strict";
+exports.__esModule = true;
+exports.isValid = exports.operator = exports.international = exports.national = void 0;
 var national_1 = require("./src/national");
+exports.national = national_1["default"];
 var international_1 = require("./src/international");
-var getOperator_1 = require("./src/getOperator");
+exports.international = international_1["default"];
+var operator_1 = require("./src/operator");
+exports.operator = operator_1["default"];
 var isValid_1 = require("./src/isValid");
-module.exports = { national: national_1["default"], international: international_1["default"], operator: getOperator_1["default"], isValid: isValid_1["default"] };
+exports.isValid = isValid_1["default"];

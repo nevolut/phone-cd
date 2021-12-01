@@ -5,11 +5,12 @@
  * @returns number in national format
  */
 exports.__esModule = true;
-exports["default"] = (function (value) {
+var national = function (value) {
     var number = +value;
     if (number.toString().substr(0, 4) == "+243")
         number = +number.toString().slice(4);
     else if (number.toString().substr(0, 3) == "243")
         number = +number.toString().slice(3);
     return number;
-});
+};
+exports["default"] = national;

@@ -6,20 +6,20 @@ var national_1 = require("./national");
  * @param {number} string
  * @returns then oprator
  */
-exports["default"] = (function (value) {
+var operator = function (value) {
     if (!value)
         return null;
-    var number = national_1["default"](value);
-    if (number.toString().length !== 9)
+    var number = (0, national_1["default"])(value).toString();
+    if (number.length !== 9)
         return null;
-    var prefix = parseInt(number.toString().substr(0, 2));
-    if ([81, 82, 83].includes(prefix))
+    if (/^(81|81|83)/.test(number))
         return "vodacom";
-    if ([80, 84, 85, 89].includes(prefix))
+    if (/^(80|84|85|89)/.test(number))
         return "orange";
-    if ([90, 91].includes(prefix))
+    if (/^(90|91)/.test(number))
         return "africel";
-    if ([97, 98, 99].includes(prefix))
+    if (/^(97|98|99)/.test(number))
         return "airtel";
     return null;
-});
+};
+exports["default"] = operator;
