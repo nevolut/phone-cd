@@ -18,7 +18,7 @@ var operator = function (value) {
         return "orange";
     if (/^(90|91)/.test(number))
         return "africel";
-    if (/^(97|98|99)/.test(number))
+    if (/^(87|97|98|99)/.test(number))
         return "airtel";
     return null;
 };
