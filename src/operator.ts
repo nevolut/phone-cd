@@ -1,9 +1,9 @@
 import national from "./national";
 
 /**
- * @description Verify the phone number operatore
- * @param {number} string
- * @returns then oprator
+ * Verifies the phone number operator.
+ * @param {string | number} value - The phone number to verify.
+ * @returns {string | null} The operator name or null if invalid.
  */
 const operator = (value: string | number): string | null => {
   if (!value) return null;

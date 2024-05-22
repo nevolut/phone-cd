@@ -1,15 +1,10 @@
 "use strict";
-exports.__esModule = true;
-var national_1 = require("./national");
-/**
- * @description Verify the phone number operatore
- * @param {number} string
- * @returns then oprator
- */
-var operator = function (value) {
+Object.defineProperty(exports, "__esModule", { value: true });
+const national_1 = require("./national");
+const operator = (value) => {
     if (!value)
         return null;
-    var number = (0, national_1["default"])(value).toString();
+    const number = (0, national_1.default)(value).toString();
     if (number.length !== 9)
         return null;
     if (/^(81|82|83)/.test(number))
@@ -22,4 +17,5 @@ var operator = function (value) {
         return "airtel";
     return null;
 };
-exports["default"] = operator;
+exports.default = operator;
+//# sourceMappingURL=operator.js.map
