@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const formatToNationalDRC = (value) => {
-    let phoneNumber = String(value).replace(/\D/g, "");
-    if (phoneNumber.startsWith("+243")) {
-        phoneNumber = phoneNumber.slice(4);
+const national = (value) => {
+    let number = +String(value).replace(/\D/g, "");
+    if (number.toString().startsWith("+243")) {
+        number = +number.toString().slice(4);
     }
-    else if (phoneNumber.startsWith("243")) {
-        phoneNumber = phoneNumber.slice(3);
+    else if (number.toString().startsWith("243")) {
+        number = +number.toString().slice(3);
     }
-    return +phoneNumber;
+    return number;
 };
-exports.default = formatToNationalDRC;
+exports.default = national;
 //# sourceMappingURL=national.js.map

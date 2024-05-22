@@ -1,2 +1,2 @@
-declare const formatToNationalDRC: (value: string | number) => number;
-export default formatToNationalDRC;
+declare const national: (value: string | number) => number;
+export default national;

@@ -1,8 +1,10 @@
 # Phone CD
 
-Handle DRC phone number validation
+Handle DRC phone number validation and formatting with ease.
 
 ## Installation
+
+To install the Phone CD package, run the following command:
 
 ```bash
 npm install phone-cd
@@ -10,88 +12,114 @@ npm install phone-cd
 
 ## Usage
 
+You can import the package using either ES6 or CommonJS syntax:
+
+### ES6 Import
+
 ```javascript
 import phone from "phone-cd";
 ```
 
-Or
+### CommonJS Require
 
 ```javascript
 const phone = require("phone-cd");
 ```
 
-### Return phone number to a national format
+## Functions
+
+### phoneCD.national()
+
+Formats the phone number to the national DRC format.
+
+#### Examples
 
 ```javascript
-const { national } = require("phone-cd");
-
-const phone = national(00243832044091);
-// const phone = national(243832044091);
-// const phone = national(+243832044091);
-// const phone = national(0832044091);
-
-console.log(phone);
-// 832044091
+phoneCD.national("00243832044091"); // returns 832044091
+phoneCD.national(243832044091);     // returns 832044091
+phoneCD.national(+243832044091);    // returns 832044091
+phoneCD.national('0832044091');     // returns 832044091
 ```
 
-### Return phone number to a international format
+### phoneCD.international()
+
+Formats the phone number to the international DRC format (+243).
+
+#### Examples
 
 ```javascript
-const { international } = require("phone-cd");
-const phone = international(0832044091);
-// const phone = local(+243832044091);
-
-console.log(phone);
-// 243832044091
+phoneCD.international("00243832044091"); // returns 243832044091
+phoneCD.international(243832044091);     // returns 243832044091
+phoneCD.international(+243832044091);    // returns 243832044091
+phoneCD.international('0832044091');     // returns 243832044091
 ```
 
-### Return phone number operator
+### phoneCD.isValid()
+
+Checks if a phone number is a valid DRC phone number.
+
+#### Examples
 
 ```javascript
-const { operator } = require("phone-cd");
-let operator = operator(0832044091);
-console.log(operator);
-// vodacom
-
-operator = operator(243850964008);
-console.log(operator);
-// orange
-
-operator = operator(243978491245);
-console.log(operator);
-// airtel
-
-operator = operator(243902248661);
-console.log(operator);
-// africel
-
-operator = operator(243721412335);
-console.log(operator);
-// null
+phoneCD.isValid(832044091);      // returns true
+phoneCD.isValid(0850964008);     // returns true
+phoneCD.isValid(243978491245);   // returns true
+phoneCD.isValid(+243902248661);  // returns true
+phoneCD.isValid(243721412335);   // returns false
 ```
 
-## Validate phone number
+### phoneCD.operator()
+
+Verifies the operator of a DRC phone number.
+
+#### Examples
 
 ```javascript
-let phone = isValid(832044091);
-console.log(phone);
-// true
-
-phone = isValid(0850964008);
-console.log(phone);
-// true
-
-phone = isValid(243978491245);
-console.log(phone);
-// true
-
-phone = isValid(+243902248661);
-console.log(phone);
-// true
-
-phone = isValid(243721412335);
-console.log(phone);
-// false
+phoneCD.operator('0832044091');   // returns "vodacom"
+phoneCD.operator(243850964008);   // returns "orange"
+phoneCD.operator(+243978491245);  // returns "airtel"
+phoneCD.operator(00243902248661); // returns "africel"
+phoneCD.operator(243721412335);   // returns null
 ```
 
-#### Biso Nde Bana Kin
+## API Reference
+
+### phoneCD.national(value: string | number): number
+
+**Parameters:**
+- `value`: The phone number to format. Can be a string or a number.
+
+**Returns:**
+- The phone number in national format.
+
+### phoneCD.international(value: string | number): number | null
+
+**Parameters:**
+- `value`: The phone number to format. Can be a string or a number.
+
+**Returns:**
+- The phone number in international format or `null` if invalid.
+
+### phoneCD.isValid(value: string | number): boolean
+
+**Parameters:**
+- `value`: The phone number to validate. Can be a string or a number.
+
+**Returns:**
+- `true` if the number is a valid DRC phone number, `false` otherwise.
+
+### phoneCD.operator(value: string | number): string | null
+
+**Parameters:**
+- `value`: The phone number to check the operator. Can be a string or a number.
+
+**Returns:**
+- The operator name as a string or `null` if no operator matches.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request on GitHub.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
