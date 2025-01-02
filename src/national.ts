@@ -8,10 +8,10 @@ const national = (value: string | number): number => {
   let number = +String(value).replace(/\D/g, "");
 
   // Remove the international DRC code if present
-  if (number.toString().startsWith("+243")) {
-    number = +number.toString().slice(4);
-  } else if (number.toString().startsWith("243")) {
-    number = +number.toString().slice(3);
+  if (String(number).startsWith("+243")) {
+    number = +String(number).slice(4);
+  } else if (String(number).startsWith("243")) {
+    number = +String(number).slice(3);
   }
 
   return number;

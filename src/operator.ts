@@ -11,7 +11,7 @@ const operator = (value: string | number): string | null => {
 
   if (number.length !== 9) return null;
 
-  if (/^(81|82|83)/.test(number)) return "vodacom";
+  if (/^(81|82|83|86)/.test(number)) return "vodacom";
   if (/^(80|84|85|89)/.test(number)) return "orange";
   if (/^(90|91)/.test(number)) return "africel";
   if (/^(87|97|98|99)/.test(number)) return "airtel";
