@@ -3,7 +3,9 @@
   "version": "1.5.2",
   "description": "Phone DRC is a phone number library to manage DRC phone number",
   "main": "dist/index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/nevolut/phone-cd.git"

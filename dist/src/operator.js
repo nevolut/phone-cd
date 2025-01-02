@@ -7,7 +7,7 @@ const operator = (value) => {
     const number = (0, national_1.default)(value).toString();
     if (number.length !== 9)
         return null;
-    if (/^(81|82|83)/.test(number))
+    if (/^(81|82|83|86)/.test(number))
         return "vodacom";
     if (/^(80|84|85|89)/.test(number))
         return "orange";
